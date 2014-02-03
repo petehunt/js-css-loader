@@ -16,6 +16,14 @@ module.exports = {
 };
 ```
 
+This will execute the file (so you get the full power of JS. `_.extend()` for SASS-style mixins etc) and look at the exports to create CSS that looks like this:
+
+```
+.topMarginSmall {
+  margin-top: 5px;
+}
+```
+
 Use it like this:
 
 ``` javascript
