@@ -12,6 +12,11 @@ Define styles like this (uses [React](http://facebook.github.io/react) CSS conve
 module.exports = {
   '.topMarginSmall': {
     marginTop: require('./constants').SMALL_UNIT
+  },
+  '@media (max-width: 600px)': {
+    '.topMarginSmall': {
+      marginTop: 2
+    }
   }
 };
 ```
