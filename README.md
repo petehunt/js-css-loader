@@ -16,7 +16,7 @@ module.exports = {
 };
 ```
 
-This will execute the file (so you get the full power of JS. `_.extend()` for SASS-style mixins etc) and look at the exports to create CSS that looks like this:
+This will `require()` the file at build time (so you get the full power of JS. `_.extend()` for SASS-style mixins etc) and look at the exports to create CSS that looks like this:
 
 ```
 .topMarginSmall {
@@ -32,3 +32,5 @@ require("style!css!js-css!./file.css.js");
 
 // Stylesheet now available with topMarginSmall class name
 ```
+
+NOTE: for fast build times you should keep the dep graphs of these modules small. Maybe they are only allowed to `require()` modules with `.style.js` in the name, and those modules are only allowed to `require()` other `.style.js` modules.
