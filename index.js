@@ -15,7 +15,7 @@ module.exports = function(content) {
     var value = stylesheet[k];
 
     k = k.trim();
-    if (k[0] === '@') {
+    if (k[0] === '@' && k !== '@font-face') {
       // media query
       css += k + '{\n';
       for (var subkey in value) {
