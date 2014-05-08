@@ -1,11 +1,12 @@
 {
-	"name": "js-css-loader",
-	"version": "0.0.2",
-	"author": "Pete Hunt",
-	"description": "js css loader module for webpack",
-	"dependencies": {
-    "react": "~0.8.0"
-	},
+  "name": "js-css-loader",
+  "version": "0.0.2",
+  "author": "Pete Hunt",
+  "description": "js css loader module for webpack",
+  "dependencies": {
+    "react": "~0.10.0",
+    "envify": "~1.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git@github.com:petehunt/js-css-loader.git"
