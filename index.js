@@ -5,7 +5,12 @@ var path = require('path');
 module.exports = function(content) {
 	this.cacheable && this.cacheable();
 
-  var stylesheet = require(path.resolve(this.resource));
+  var p = require.resolve(path.resolve(this.resource));
+  if (p in require.cache) {
+    delete require.cache[p];
+  }
+
+  var stylesheet = require(p);
   var css = '';
 
   for (var k in stylesheet) {
