@@ -1,6 +1,6 @@
 {
   "name": "js-css-loader",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Pete Hunt",
   "description": "js css loader module for webpack",
   "dependencies": {
