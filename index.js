@@ -5,7 +5,12 @@ var path = require('path');
 module.exports = function(content) {
 	this.cacheable && this.cacheable();
 
-  var stylesheet = require(path.resolve(this.resource));
+  var p = require.resolve(path.resolve(this.resource));
+  if (p in require.cache) {
+    delete require.cache[p];
+  }
+
+  var stylesheet = require(p);
   var css = '';
 
   for (var k in stylesheet) {
@@ -15,7 +20,7 @@ module.exports = function(content) {
     var value = stylesheet[k];
 
     k = k.trim();
-    if (k[0] === '@') {
+    if (k[0] === '@' && k !== '@font-face') {
       // media query
       css += k + '{\n';
       for (var subkey in value) {
