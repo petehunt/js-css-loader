@@ -1,5 +1,7 @@
 # js css loader for webpack
 
+![unmaintained](http://img.shields.io/badge/status-unmaintained-red.png)
+
 ## Problem
 
 Sharing values between JS and CSS is hard, and CSS preprocessors kind of suck.
