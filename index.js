@@ -26,7 +26,7 @@ module.exports = function(content) {
           continue;
         }
 
-        css += subkey + ' {\n' + CSSPropertyOperations.createMarkupForStyles(value[subkey]) + '\n}\n';
+        css += subkey.trim() + ' {\n' + CSSPropertyOperations.createMarkupForStyles(value[subkey]) + '\n}\n';
       }
       css += '\n}\n';
     } else {
