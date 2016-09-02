@@ -4,8 +4,7 @@
   "author": "Pete Hunt",
   "description": "js css loader module for webpack",
   "dependencies": {
-    "react": "~0.10.0",
-    "envify": "~1.2.1"
+    "react": ">=0.10.0"
   },
   "repository": {
     "type": "git",
