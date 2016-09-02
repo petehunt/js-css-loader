@@ -18,8 +18,8 @@ module.exports = function(content) {
     var value = stylesheet[k];
 
     k = k.trim();
-    if (k[0] === '@' && k !== '@font-face') {
-      // media query
+    if (/^@media|^\:\w+$/.test(k)) {
+      // media query or scope block
       css += k + '{\n';
       for (var subkey in value) {
         if (!value.hasOwnProperty(subkey)) {
